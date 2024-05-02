@@ -13,7 +13,7 @@ void view() {
 void viewIR() {
   Serial.begin(9600);
   ReadIR();
-  while (START == 1) {
+  while (1) {
     ReadIR();
     for (int i = 0; i < 2; i++) {
       Serial.print(S[i]);
@@ -27,7 +27,7 @@ void viewIR() {
 void viewIRraw() {
   Serial.begin(9600);
   ReadIR();
-  while (START == 1) {
+  while (1) {
     ReadIR();
     for (int i = 0; i < 2; i++) {
       Serial.print(analogRead(pins[i]));

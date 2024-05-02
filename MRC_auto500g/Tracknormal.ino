@@ -10,15 +10,15 @@ void GO(int Speed) {
   int light_L = analogRead(Light_L);
   int light_R = analogRead(Light_R);
   if (light_L < 500 && light_R > 500) {
-    motor(-70,-70);
-    delay(300);
-    motor(70,-70);
+    motor(-100,-100);
+    delay(275);
+    motor(100,-100);
     delay(275);
   }
   if (light_L > 500 && light_R < 500) {
-    motor(-70,-70);
-    delay(300);
-    motor(-70,70);
+    motor(-100,-100);
+    delay(275);
+    motor(-100,100);
     delay(275);
   }
   else {

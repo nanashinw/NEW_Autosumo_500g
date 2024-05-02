@@ -44,6 +44,7 @@ void setup() {
 
   //Start module !!!!!!
   wait_SW8();
+  delay(4999);
 
   switch (readDipSwitch()) {
     case 0:
@@ -52,8 +53,6 @@ void setup() {
     }
       break;
     case 1:
-      // motor(100, 100);
-      // delay(500);
       routine_pid(70);
       break;
     case 2:

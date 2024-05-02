@@ -13,7 +13,7 @@ void motor(int speedL, int speedR) {
     analogWrite(PWM_L, speedL);  //50 = 50
   } else {
     digitalWrite(DIR_L, HIGH);
-    analogWrite(PWM_L, speedL);  //-(-50) = 50
+    analogWrite(PWM_L, -speedL);  //-(-50) = 50
   }
 
   //motor Right speed
@@ -25,6 +25,6 @@ void motor(int speedL, int speedR) {
     analogWrite(PWM_R, speedR);  //50 = 50
   } else {
     digitalWrite(DIR_R, HIGH);
-    analogWrite(PWM_R, speedR);  //-(-50) = 50
+    analogWrite(PWM_R, -speedR);  //-(-50) = 50
   }
 }
